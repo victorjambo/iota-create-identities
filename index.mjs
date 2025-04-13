@@ -12,7 +12,7 @@ const writeToFile = async (body, extension = "txt") => {
   let documentPath = path.join(
     baseDir,
     baseFolder,
-    `${Date.now()}.${extension}`
+    `output-${Date.now()}.${extension}`
   );
 
   await writeFile(documentPath, body);
@@ -211,29 +211,29 @@ const callSmartContract = async (publicKeyJwk) => {
 };
 
 (async () => {
-  const result = {};
+  const output = {};
   const jwk = await createJWK();
 
   const { txResponse, faucetResponse } = await callSmartContract(
     jwk.publicKeyJwk
   );
 
-  result["JWK"] = jwk;
-  result["GasFaucet"] = faucetResponse;
-  result["SmartContractCallResponse"] = txResponse;
+  output["JWK"] = jwk;
+  output["GasFaucet"] = faucetResponse;
+  output["SmartContractCallResponse"] = txResponse;
 
   const ownerShared = txResponse.effects?.created?.find((x) => x.owner.Shared);
   const identity = ownerShared?.reference.objectId;
 
-  result["Links"] = {
+  output["Links"] = {
     IotaExplorerTxBlock: `https://explorer.rebased.iota.org/txblock/${txResponse.digest}`,
     ResolveIdentity: `https://uni-resolver.tlip.io/1.0/identifiers/did:iota:testnet:${identity}`,
     IotaExplorerObject: `https://explorer.rebased.iota.org/object/${identity}`,
   };
 
-  result["CreateIdentityPayload"] = {
-    emailAddress: "<emailAddress>",
-    password: "<Password>",
+  output["CreateIdentityPayload"] = {
+    emailAddress: "example@email.com",
+    password: "Password@1234",
     role: "organization",
     identity: `did:iota:testnet:${identity}`,
     verMethodKeyPair: {
@@ -242,8 +242,16 @@ const callSmartContract = async (publicKeyJwk) => {
     },
   };
 
-  const documentPath = await writeToFile(JSON.stringify(result), "json");
+  const documentPath = await writeToFile(JSON.stringify(output), "json");
 
-  console.log("Data saved in ", documentPath);
-  console.log(JSON.stringify(result));
+  console.log(output);
+
+  console.log(
+    "\x1b[34m",
+    "⚡️[Logs]:",
+    "\x1b[36m",
+    "Output data saved in:",
+    "\x1b[7m",
+    documentPath
+  );
 })();

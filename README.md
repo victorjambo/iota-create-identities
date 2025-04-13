@@ -2,9 +2,32 @@
 
 This tool combines multiple other tools and helps to create identities.
 
-## Scripts
+## Running the scripts
 
-To execute the script run: `npm run dev` or `node index.mjs`.
+Install packages:
+
+```bash
+npm install
+```
+
+Execute script run:
+
+```bash
+npm run dev
+```
+
+Alternative:
+
+```bash
+node index.mjs
+```
+
+### Outputs and Identities
+
+Outputs of the created identities will be logged in the terminal and stored in the outputs folder.
+In the `output-*.json` file, copy value of `CreateIdentityPayload` and paste on Postman. This payload is used to create identities.
+
+NOTE: Remember to change `emailAddress` in the payload.
 
 ## Smart Contract
 
