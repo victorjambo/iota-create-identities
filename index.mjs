@@ -7,7 +7,7 @@ import { JWK } from "ts-jose";
 import { Converter } from "@iota/util.js";
 
 const writeToFile = async (body, extension = "txt") => {
-  const baseFolder = "/outputs";
+  const baseFolder = "/output";
   const baseDir = path.resolve(path.dirname(""));
   let documentPath = path.join(
     baseDir,
