@@ -31,9 +31,11 @@ NOTE: Remember to change `emailAddress` in the payload.
 
 ## Smart Contract
 
-- Address: `0x7a67dd504eb1291958495c71a07d20985951648dd5ebf01ac921a50257346818`
-- Component: `identity`
+- Address: [0x7a67dd504eb1291958495c71a07d20985951648dd5ebf01ac921a50257346818](https://explorer.rebased.iota.org/object/0x7a67dd504eb1291958495c71a07d20985951648dd5ebf01ac921a50257346818)
+- Module: [identity](https://explorer.rebased.iota.org/object/0x7a67dd504eb1291958495c71a07d20985951648dd5ebf01ac921a50257346818?module=identity)
 - Function: `new`
+
+### 🚀
 
 #### Links
 
