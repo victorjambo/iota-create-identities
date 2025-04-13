@@ -1,0 +1,19 @@
+{
+  "name": "iota-client",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@iota/iota-sdk": "^0.6.0",
+    "@iota/util.js": "^1.8.6",
+    "bip39": "^3.1.0",
+    "ts-jose": "^6.0.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

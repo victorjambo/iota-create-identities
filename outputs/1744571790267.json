@@ -1,0 +1,130 @@
+{
+  "JWK": {
+    "publicKeyJwk": {
+      "key_ops": ["verify"],
+      "ext": true,
+      "crv": "Ed25519",
+      "x": "NCch0WYUc6MO8Zj2oGu7sEQ2IClB72oZpwOyoua5TQ8",
+      "kty": "OKP",
+      "alg": "EdDSA",
+      "use": "sig",
+      "kid": "ZVbG-hduyEWI4nfHdmjKa7UV_mxCDC50QrxMKkOFcys"
+    },
+    "privateKeyJwk": {
+      "key_ops": ["sign"],
+      "ext": true,
+      "crv": "Ed25519",
+      "d": "MxekHP9_L6FE74rd5GdQoQqQLKn-65GdeqWpjC038cg",
+      "x": "NCch0WYUc6MO8Zj2oGu7sEQ2IClB72oZpwOyoua5TQ8",
+      "kty": "OKP",
+      "alg": "EdDSA",
+      "kid": "ZVbG-hduyEWI4nfHdmjKa7UV_mxCDC50QrxMKkOFcys",
+      "use": "sig"
+    },
+    "privateKeyVerificationMethodRaw": "3317a41cff7f2fa144ef8adde46750a10a902ca9feeb919d7aa5a98c2d37f1c8",
+    "publicKeyVerificationMethodRaw": "342721d1661473a30ef198f6a06bbbb04436202941ef6a19a703b2a2e6b94d0f"
+  },
+  "GasFaucet": {
+    "transferredGasObjects": [
+      {
+        "amount": 10000000000,
+        "id": "0x312568d4977d995edaf80f5f8bba2451322b2899d0b4ab2764683a9554903670",
+        "transferTxDigest": "J2YbmV8Uyarz3TcYdTxjLtuRGZZ13dBu6Qht8CNTfDXE"
+      }
+    ],
+    "error": null
+  },
+  "SmartContractCallResponse": {
+    "digest": "CvCAUe1NSwEooxpPZqQQXbNBc3kNqbEVHsmJSXwy2xZU",
+    "effects": {
+      "messageVersion": "v1",
+      "status": { "status": "success" },
+      "executedEpoch": "146",
+      "gasUsed": {
+        "computationCost": "1000000",
+        "computationCostBurned": "1000000",
+        "storageCost": "8907200",
+        "storageRebate": "980400",
+        "nonRefundableStorageFee": "0"
+      },
+      "modifiedAtVersions": [
+        {
+          "objectId": "0x312568d4977d995edaf80f5f8bba2451322b2899d0b4ab2764683a9554903670",
+          "sequenceNumber": "190871248"
+        }
+      ],
+      "sharedObjects": [
+        {
+          "objectId": "0x0000000000000000000000000000000000000000000000000000000000000006",
+          "version": 229550430,
+          "digest": "2gWDox2mufbHEHmoThJnmrBA22KFRCr2UHbkhWftAAY6"
+        }
+      ],
+      "transactionDigest": "CvCAUe1NSwEooxpPZqQQXbNBc3kNqbEVHsmJSXwy2xZU",
+      "created": [
+        {
+          "owner": { "Shared": { "initial_shared_version": 229550431 } },
+          "reference": {
+            "objectId": "0x8f4b8a9d76403f02cd32e048c4f1adbff52961b92920d9cf789bc568dedeb88f",
+            "version": 229550431,
+            "digest": "G5d62TGbT3jT3Ttvt16zAEQw5GzZfuTD8JabkMLr538k"
+          }
+        },
+        {
+          "owner": {
+            "AddressOwner": "0x0b4751b9ec5684981d07006873c6b9c7a906ecec11272f7f7d002bf14d95fb15"
+          },
+          "reference": {
+            "objectId": "0x96fcc4224c45faf594b23529fc7975fab311b993ca6d2c09deca4b8a44477c7a",
+            "version": 229550431,
+            "digest": "BHT5N88bsraRLbL1yxHjznQQM692QWJrc586Vph4Q1xc"
+          }
+        }
+      ],
+      "mutated": [
+        {
+          "owner": {
+            "AddressOwner": "0x0b4751b9ec5684981d07006873c6b9c7a906ecec11272f7f7d002bf14d95fb15"
+          },
+          "reference": {
+            "objectId": "0x312568d4977d995edaf80f5f8bba2451322b2899d0b4ab2764683a9554903670",
+            "version": 229550431,
+            "digest": "AMKWUxF4K62HYQLcuu1f2Jw6rhD4R3eydVDpqJqLbr5A"
+          }
+        }
+      ],
+      "gasObject": {
+        "owner": {
+          "AddressOwner": "0x0b4751b9ec5684981d07006873c6b9c7a906ecec11272f7f7d002bf14d95fb15"
+        },
+        "reference": {
+          "objectId": "0x312568d4977d995edaf80f5f8bba2451322b2899d0b4ab2764683a9554903670",
+          "version": 229550431,
+          "digest": "AMKWUxF4K62HYQLcuu1f2Jw6rhD4R3eydVDpqJqLbr5A"
+        }
+      },
+      "eventsDigest": "FvNKy5TqcADm4ERVEGVAGweNX2yYxGGn7aP8zEQtkNcM",
+      "dependencies": [
+        "3TfHD11MdEmM8ChXdZiezkkkxJkveqNjC6dEVUahJeqh",
+        "8XFh77kKnHcA6hm1FpE61c6vAoaJfxdTpZnc4iy2ayUU",
+        "J2YbmV8Uyarz3TcYdTxjLtuRGZZ13dBu6Qht8CNTfDXE"
+      ]
+    },
+    "confirmedLocalExecution": false
+  },
+  "Links": {
+    "IotaExplorerTxBlock": "https://explorer.rebased.iota.org/txblock/CvCAUe1NSwEooxpPZqQQXbNBc3kNqbEVHsmJSXwy2xZU",
+    "ResolveIdentity": "https://uni-resolver.tlip.io/1.0/identifiers/did:iota:testnet:0x8f4b8a9d76403f02cd32e048c4f1adbff52961b92920d9cf789bc568dedeb88f",
+    "IotaExplorerObject": "https://explorer.rebased.iota.org/object/0x8f4b8a9d76403f02cd32e048c4f1adbff52961b92920d9cf789bc568dedeb88f"
+  },
+  "CreateIdentityPayload": {
+    "emailAddress": "<emailAddress>",
+    "password": "<Password>",
+    "role": "organization",
+    "identity": "did:iota:testnet:0x8f4b8a9d76403f02cd32e048c4f1adbff52961b92920d9cf789bc568dedeb88f",
+    "verMethodKeyPair": {
+      "privateKey": "3317a41cff7f2fa144ef8adde46750a10a902ca9feeb919d7aa5a98c2d37f1c8",
+      "publicKey": "342721d1661473a30ef198f6a06bbbb04436202941ef6a19a703b2a2e6b94d0f"
+    }
+  }
+}
