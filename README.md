@@ -2,6 +2,10 @@
 
 This tool combines multiple other tools and helps to create identities.
 
+## Scripts
+
+To execute the script run: `npm run dev` or `node index.mjs`.
+
 ## Smart Contract
 
 - Address: `0x7a67dd504eb1291958495c71a07d20985951648dd5ebf01ac921a50257346818`
