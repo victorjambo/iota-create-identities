@@ -1,7 +1,8 @@
 import { getFullnodeUrl, IotaClient } from "@iota/iota-sdk/client";
 import { Transaction } from "@iota/iota-sdk/transactions";
 import { Ed25519Keypair } from "@iota/iota-sdk/keypairs/ed25519";
-import { writeFile } from "fs/promises";
+import { writeFile, lstat } from "fs/promises";
+import { existsSync, mkdirSync, lstatSync } from "fs";
 import path from "path";
 import { JWK } from "ts-jose";
 import { Converter } from "@iota/util.js";
@@ -9,10 +10,17 @@ import { Converter } from "@iota/util.js";
 const writeToFile = async (body, extension = "txt") => {
   const baseFolder = "/output";
   const baseDir = path.resolve(path.dirname(""));
+  const baseFolderDir = path.join(baseDir, baseFolder);
+
+  const isExistingDir = existsSync(baseFolderDir);
+
+  if (!isExistingDir) {
+    mkdirSync(baseFolderDir);
+  }
+
   let documentPath = path.join(
-    baseDir,
-    baseFolder,
-    `output-${Date.now()}.${extension}`
+    baseFolderDir,
+    `${baseFolder}-${Date.now()}.${extension}`
   );
 
   await writeFile(documentPath, body);
@@ -226,9 +234,9 @@ const callSmartContract = async (publicKeyJwk) => {
   const identity = ownerShared?.reference.objectId;
 
   output["Links"] = {
+    IotaExplorerObject: `https://explorer.rebased.iota.org/object/${identity}`,
     IotaExplorerTxBlock: `https://explorer.rebased.iota.org/txblock/${txResponse.digest}`,
     ResolveIdentity: `https://uni-resolver.tlip.io/1.0/identifiers/did:iota:testnet:${identity}`,
-    IotaExplorerObject: `https://explorer.rebased.iota.org/object/${identity}`,
   };
 
   output["CreateIdentityPayload"] = {
@@ -242,7 +250,10 @@ const callSmartContract = async (publicKeyJwk) => {
     },
   };
 
-  const documentPath = await writeToFile(JSON.stringify(output), "json");
+  const documentPath = await writeToFile(
+    JSON.stringify(output, null, 4),
+    "json"
+  );
 
   console.log(output);
 
