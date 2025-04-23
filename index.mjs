@@ -162,7 +162,6 @@ const faucetGas = async (address) => {
       },
     }),
   }).then((res) => res.json());
-  console.log("🚀 ~ faucetResponse:", faucetResponse);
 
   return faucetResponse;
 };
