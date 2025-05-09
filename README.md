@@ -2,6 +2,14 @@
 
 This tool combines multiple other tools and helps to create identities.
 
+## Hosted app
+
+Link: https://iota-create-identities.vercel.app
+
+### Caveats
+
+- Link only works with **Firefox** and **Safari**
+
 ## Running the scripts
 
 Install packages:
@@ -13,13 +21,13 @@ npm install
 Execute script run:
 
 ```bash
-npm run dev
+npm run create-identity-payload
 ```
 
 Alternative:
 
 ```bash
-node index.mjs
+node src/index.mjs
 ```
 
 ### Outputs and Identities
