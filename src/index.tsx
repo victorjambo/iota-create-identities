@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { CreateIdentity } from "./CreateIdentity";
 
 const root = document.querySelector("#root");
 
 const AppRoot = () => {
   return (
     <React.StrictMode>
-      <div>Hello world</div>
+      <CreateIdentity />
     </React.StrictMode>
   );
 };

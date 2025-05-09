@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "generate": "node scripts/index.mjs",
-    "dev": "vite"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "create-identity-payload": "node scripts/index.mjs"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +15,7 @@
     "@iota/iota-sdk": "^0.6.0",
     "@iota/util.js": "^1.8.6",
     "@originjs/vite-plugin-commonjs": "^1.0.3",
+    "@uiw/react-json-view": "^2.0.0-alpha.32",
     "@vitejs/plugin-react": "^4.4.1",
     "bip39": "^3.1.0",
     "react": "^19.1.0",
