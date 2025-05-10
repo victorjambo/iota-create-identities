@@ -25,7 +25,7 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "types": ["vite/client", "vitest"],
-    "lib": ["ES2021.String", "dom"]
+    "lib": ["ES2021.String", "dom", "es2015", "es2016"]
   },
   "exclude": ["node_modules", "tmp"]
 }

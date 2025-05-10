@@ -15,17 +15,20 @@
     "@iota/iota-sdk": "^0.6.0",
     "@iota/util.js": "^1.8.6",
     "@originjs/vite-plugin-commonjs": "^1.0.3",
+    "@tailwindcss/postcss": "^4.1.6",
+    "@tailwindcss/vite": "^4.1.6",
     "@uiw/react-json-view": "^2.0.0-alpha.32",
     "@vitejs/plugin-react": "^4.4.1",
     "bip39": "^3.1.0",
+    "postcss": "^8.5.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.6",
     "ts-jose": "^6.0.10",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
     "vite": "^5.4.19",
-    "vite-plugin-node-polyfills": "^0.23.0",
-    "vite-plugin-require": "^1.2.14"
+    "vite-plugin-node-polyfills": "^0.23.0"
   },
   "devDependencies": {
     "@types/react": "^19.1.3",

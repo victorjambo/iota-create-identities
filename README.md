@@ -4,7 +4,7 @@ This tool combines multiple other tools and helps to create identities.
 
 ## Hosted app
 
-Link: https://iota-create-identities.vercel.app
+Link: <https://iota-create-identities.vercel.app>
 
 ### Caveats
 

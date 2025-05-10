@@ -7,7 +7,9 @@ const root = document.querySelector("#root");
 const AppRoot = () => {
   return (
     <React.StrictMode>
-      <CreateIdentity />
+      <div className="mx-auto container mt-10 w-full">
+        <CreateIdentity />
+      </div>
     </React.StrictMode>
   );
 };
