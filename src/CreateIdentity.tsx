@@ -37,7 +37,7 @@ export const CreateIdentity: React.FC = () => {
   }, []);
 
   return (
-    <div className="mx-96 space-y-8">
+    <div className="mx-4 xl:mx-96 space-y-8">
       {browser && !["Firefox", "Safari"].includes(browser) ? (
         <div
           className="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4 mb-5"
