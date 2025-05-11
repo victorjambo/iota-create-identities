@@ -45,8 +45,7 @@ export const CreateIdentity: React.FC = () => {
         >
           <p className="font-bold">Unsupported Browser</p>
           <p>
-            Try switching Browser to <b>Firefox</b> or <b>Safari</b> for this to
-            work.
+            Switch to <b>Firefox</b> or <b>Safari</b> for this to work.
           </p>
         </div>
       ) : null}
