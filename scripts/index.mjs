@@ -106,6 +106,7 @@ const createJWK = async () => {
   const publicKey = theKey.publicKey;
 
   const pubKey = await subtle.exportKey("jwk", publicKey);
+  pubKey.alg = "EdDSA"
   const pubKeyAsJose = await JWK.fromObject(pubKey);
   const kid = await pubKeyAsJose.getThumbprint();
 
@@ -131,6 +132,7 @@ const createJWK = async () => {
   // delete did.verificationMethod[0].publicKeyJwk["key_ops"];
 
   const privateKeyAsJsonWebKey = await subtle.exportKey("jwk", privateKey);
+  privateKeyAsJsonWebKey.alg = "EdDSA"
   const privateKeyAsJose = await JWK.fromObject(privateKeyAsJsonWebKey);
   const kidPrivate = await privateKeyAsJose.getThumbprint();
 
