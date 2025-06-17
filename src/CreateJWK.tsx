@@ -7,7 +7,16 @@ const CreateJWK: React.FC = () => {
 
   const handleClick = async (): Promise<void> => {
     const jwk = await createJWK();
-    setData(jwk);
+    setData({
+      verMethodKeyPair: {
+        privateKey: jwk.privateKeyVerificationMethodRaw,
+        publicKey: jwk.publicKeyVerificationMethodRaw,
+      },
+      jwk: {
+        publicKey: jwk.publicKeyJwk,
+        privateKey: jwk.privateKeyJwk,
+      },
+    });
   };
 
   return (
@@ -23,7 +32,11 @@ const CreateJWK: React.FC = () => {
         {data && (
           <div>
             <h2 className="text-slate-500 pb-1">JWK:</h2>
-            <JsonView shortenTextAfterLength={200} displayDataTypes={false} value={data} collapsed={true} />
+            <JsonView
+              shortenTextAfterLength={200}
+              displayDataTypes={false}
+              value={data}
+            />
           </div>
         )}
       </div>

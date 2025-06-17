@@ -83,8 +83,8 @@ export const createJWK = async () => {
   const privateKey = theKey.privateKey;
   const publicKey = theKey.publicKey;
 
-  const pubKey = await subtle.exportKey("jwk", publicKey) as any;
-  pubKey.alg = "EdDSA"
+  const pubKey = (await subtle.exportKey("jwk", publicKey)) as any;
+  pubKey.alg = "EdDSA";
   const pubKeyAsJose = await JWK.fromObject(pubKey);
   const kid = await pubKeyAsJose.getThumbprint();
 
@@ -109,8 +109,11 @@ export const createJWK = async () => {
   did.verificationMethod[0].publicKeyJwk = pubKeyObj;
   // delete did.verificationMethod[0].publicKeyJwk["key_ops"];
 
-  const privateKeyAsJsonWebKey = await subtle.exportKey("jwk", privateKey) as any;
-  privateKeyAsJsonWebKey.alg = "EdDSA"
+  const privateKeyAsJsonWebKey = (await subtle.exportKey(
+    "jwk",
+    privateKey
+  )) as any;
+  privateKeyAsJsonWebKey.alg = "EdDSA";
   const privateKeyAsJose = await JWK.fromObject(privateKeyAsJsonWebKey);
   const kidPrivate = await privateKeyAsJose.getThumbprint();
 
@@ -123,10 +126,10 @@ export const createJWK = async () => {
   const publicKeyRaw = Buffer.from(pubKey.x, "base64");
 
   return {
-    publicKeyJwk: pubKeyObj,
-    privateKeyJwk: privateKeyObj,
     privateKeyVerificationMethodRaw: Converter.bytesToHex(privateKeyRaw),
     publicKeyVerificationMethodRaw: Converter.bytesToHex(publicKeyRaw),
+    publicKeyJwk: pubKeyObj,
+    privateKeyJwk: privateKeyObj,
   };
 };
 
@@ -230,7 +233,7 @@ interface IOutput {
       publicKey: string;
     };
   };
-} 
+}
 
 export const generateKey = async () => {
   // @ts-ignore
