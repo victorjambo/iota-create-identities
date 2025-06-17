@@ -13,12 +13,6 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {
-      "@twin/twin-core": ["packages/twin-core/src/index.ts"],
-      "@twin/models": ["packages/models/src/index.ts"],
-      "@twin/twin-connector": ["packages/twin-connector/src/index.ts"],
-      "@twin/authentication": ["packages/authentication/src/index.ts"]
-    },
     "jsx": "react-jsx",
     "allowJs": false,
     "esModuleInterop": false,
