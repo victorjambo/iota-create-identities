@@ -30,14 +30,28 @@ const CreateJWK: React.FC = () => {
         </button>
 
         {data && (
-          <div>
-            <h2 className="text-slate-500 pb-1">JWK:</h2>
-            <JsonView
-              shortenTextAfterLength={200}
-              displayDataTypes={false}
-              value={data}
-            />
-          </div>
+          <>
+            <div>
+              <h2 className="text-slate-500 pb-1">JWK:</h2>
+              <JsonView
+                shortenTextAfterLength={200}
+                displayDataTypes={false}
+                value={data}
+              />
+            </div>
+            <hr />
+            <a
+              href="https://iotaledger.github.io/ebsi-stardust-components/public/encode_identity.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-700"
+            >
+              IOTA CLI tool to encode identity
+            </a>
+            <p className="text-slate-500 pt-2 italic text-xs">
+              Use the above tool to encode the JWK. Copy Paste the jwk.publicKey into the the tool
+            </p>
+          </>
         )}
       </div>
     </div>
